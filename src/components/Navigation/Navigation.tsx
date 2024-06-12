@@ -6,6 +6,33 @@ import { MdOutlineConnectingAirports } from 'react-icons/md';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { styles } from './Styles';
 
+const NAV_ITEMS = [
+	{
+		href: '/about',
+		label: 'About',
+	},
+	{
+		href: '/hotels',
+		label: 'Hotels',
+	},
+	{
+		href: '/blog',
+		label: 'Blog',
+	},
+	{
+		href: '/map',
+		label: 'Map',
+	},
+	{
+		href: '/profile',
+		label: 'Profile',
+	},
+	{
+		href: '/travelers',
+		label: 'Travelers',
+	},
+];
+
 const Navigation = () => {
 	const pathname = usePathname();
 	return (
@@ -16,24 +43,17 @@ const Navigation = () => {
 			</div>
 
 			<ul className={styles.linksContainer}>
-				<Link href="" className={styles.link}>
-					About
-				</Link>
-				<Link href="" className={styles.link}>
-					Hotels
-				</Link>
-				<Link href="" className={styles.link}>
-					Blog
-				</Link>
-				<Link href="" className={styles.link}>
-					Map
-				</Link>
-				<Link href="" className={styles.link}>
-					Profile
-				</Link>
-				<Link href="" className={styles.link}>
-					Travelers
-				</Link>
+				{NAV_ITEMS.map(({ href, label }) => {
+					return (
+						<Link
+							key={label}
+							href={href}
+							className={`${styles.link} ${pathname === href ? 'text-yellow-400 underline' : ''}`}
+						>
+							{label}
+						</Link>
+					);
+				})}
 			</ul>
 		</div>
 	);

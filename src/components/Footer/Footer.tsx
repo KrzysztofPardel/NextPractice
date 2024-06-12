@@ -1,16 +1,14 @@
-
 import React from 'react';
 import Link from 'next/link';
 import { MdOutlineConnectingAirports } from 'react-icons/md';
 const styles = {
-	container: 'w-100% h-3rem flex justify-center gap-1/4 p-3',
+	container: 'w-100% h-3rem flex justify-evenly md:justify-center gap-1/4 p-3',
 	iconsContainer: 'flex items-center p-5',
 	logoIcon: 'text-6xl',
-	linksContainer: 'w-1/6 flex flex-col items-center p-5',
+	linksContainer: 'w-1/2 flex flex-col items-center p-5',
 	link: 'w-4rem p-2',
 };
 const Footer = () => {
-	
 	return (
 		<div className={styles.container}>
 			<div className={styles.iconsContainer}>

@@ -5,6 +5,7 @@ import Hotels from '@/components/Hotels/Hotels';
 import Slug from '@/components/Hotels/Slug';
 
 const HotelsPage = () => {
+	
 	return (
 		<>
 			<Navigation />

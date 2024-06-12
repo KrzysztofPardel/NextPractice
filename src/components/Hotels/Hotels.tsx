@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Hotels = ({ params }: { params: { slug: string } }) => {
+const Hotels = () => {
 	return (
 		<>
 			Hotels
 			<p className="">Look at Other pages</p>
-			<Link href={`/hotels/${params.slug}`} className="">
+			<Link href={`/hotels/${}`} className="">
 				Go to Slug
 			</Link>
 		</>
