@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Navigation from '@/components/Navigation/Navigation';
 import { Montserrat } from 'next/font/google';
-import { useRouter } from 'next/router';
+import { useRouter, usePathname } from 'next/navigation';
 
 const montserrat = Montserrat({
 	weight: '400',
@@ -24,13 +24,9 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
-	const router = useRouter();
-	const isAdminRoute = router.pathname.startsWith('/admin');
-
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				{isAdminRoute === true ? <Navigation /> : null}
 				<Navigation />
 				{children}
 			</body>

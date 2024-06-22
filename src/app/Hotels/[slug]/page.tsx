@@ -4,13 +4,14 @@ import Navigation from '@/components/Navigation/Navigation';
 import Hotels from '@/components/Hotels/Hotels';
 import Slug from '@/components/Hotels/Slug';
 
-const HotelsPage = () => {
-	
+const HotelsPage = async ({ params }: { params: { slug: string } }) => {
+	const res = await fetch('https://api.adviceslip.com/advice', { cache: 'no-store' });
+	const data = await res.json();
 	return (
 		<>
-			<Navigation />
-			<Slug />
-			<Footer />
+			{/* @ts-ignore */}
+			{JSON.stringify(data)}
+			{/* <Slug /> */}
 		</>
 	);
 };

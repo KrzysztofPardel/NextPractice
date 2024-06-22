@@ -1,6 +1,7 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Loading from '../Hotels/loading';
+// import Loading from '../Hotels/loading';
 
 const Slug = () => {
 	const router = useRouter();
@@ -24,7 +25,6 @@ const Slug = () => {
 		if (slug) {
 			fetchData();
 		}
-		
 	}, [slug]);
 
 	const slugComponent = loading ? <Slug /> : null;

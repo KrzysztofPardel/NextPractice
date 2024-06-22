@@ -10,7 +10,6 @@ const HotelsPage = () => {
 		<>
 			<Navigation />
 			<Reserve />
-			<Footer />
 		</>
 	);
 };
